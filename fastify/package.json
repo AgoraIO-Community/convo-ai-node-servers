@@ -1,0 +1,21 @@
+{
+  "name": "agora-convo-ai-fastify-server",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "agora-token": "^2.0.3",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.26.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
