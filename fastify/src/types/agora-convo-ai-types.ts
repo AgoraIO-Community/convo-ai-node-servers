@@ -79,7 +79,7 @@ interface MicrosoftTTSParams {
 }
 
 interface ElevenLabsTTSParams {
-  api_key: string;
+  key: string;
   voice_id: string;
   model_id: string;
 }

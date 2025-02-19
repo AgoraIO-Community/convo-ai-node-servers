@@ -232,7 +232,7 @@ function getTTSConfig(vendor: TTSVendor): TTSConfig {
     return {
       vendor: TTSVendor.ElevenLabs,
       params: {
-        api_key: process.env.ELEVENLABS_API_KEY,
+        key: process.env.ELEVENLABS_API_KEY,
         model_id: process.env.ELEVENLABS_MODEL_ID,
         voice_id: process.env.ELEVENLABS_VOICE_ID,
       },
