@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import { RtcTokenBuilder, RtcRole } from 'agora-token';
 
-const router = express.Router();
+export const tokenRouter = express.Router();
 
 // Interface for validated and parsed request parameters
 interface ValidatedParams {
@@ -24,7 +24,7 @@ interface RequestWithValidatedParams extends Request {
  * - uid: User identifier used for token generation
  * - channel: Channel name used for token generation
  */
-router.get(
+tokenRouter.get(
   '/',
   validateEnvironment as express.RequestHandler,
   validateRequest as express.RequestHandler,
@@ -143,5 +143,3 @@ function validateRequest(
 
   next();
 }
-
-export { router as tokenRouter };

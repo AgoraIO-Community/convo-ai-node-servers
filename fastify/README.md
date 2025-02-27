@@ -2,7 +2,11 @@
 
 This Fastify server implements endpoints for managing conversational AI agents using Agora's ConvoAI REST API.
 
-## Setup
+## Build your own server
+
+To learn how to build your own server, follow the instructions in the [docs/FASTIFY_GUIDE.md](../docs/FASTIFY_GUIDE.md) file.
+
+## Run the server
 
 1. Install dependencies
 
@@ -29,6 +33,13 @@ This Fastify server implements endpoints for managing conversational AI agents u
    ```bash
    npm start
    ```
+
+   ## Architecture
+
+<picture>
+  <source srcset="../.github/assets/Agora-ConvoAI-NodeJS-Server-Architecture-dark.png" media="(prefers-color-scheme: dark)">
+  <img src="../.github/assets/Agora-ConvoAI-NodeJS-Server-Architecture-light.png" alt="Architecture diagram of Conversational Ai by Agora and OpenAi">
+</picture>
 
 ## API Endpoints
 
@@ -107,8 +118,16 @@ See `.env.example` for all required environment variables.
 
 ## Validation
 
-The server implements request validation using Fastify's schema validation:
+The server implements request [validation](src/utils/validation.ts) using Fastify's schema validation:
 
-- Token requests validate uid (must be a number) and channel name (1-64 alphanumeric characters with hyphens)
-- Agent invite requests validate requester_id and channel_name format
 - All endpoints validate required environment variables
+- Agent invite requests validate requester_id (string or positive integer) and channel_name (3-64 characters)
+- Token requests validate uid (must be a number) and channel name (string 3-64 characters)
+
+## Error Handling
+
+The server implements consistent error handling with appropriate HTTP status codes:
+
+- 400: Bad Request (invalid parameters)
+- 415: Unsupported Media Type
+- 500: Server Error (missing configuration or runtime errors)

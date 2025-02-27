@@ -135,10 +135,9 @@ export async function validateRequestBody(
 
     // Validate requester_id format
     if (typeof requester_id === 'string') {
-      if (!/^[a-zA-Z0-9-]+$/.test(requester_id)) {
+      if (requester_id.trim() === '') {
         return reply.code(400).send({
-          error:
-            'requester_id must contain only alphanumeric characters and hyphens',
+          error: 'requester_id cannot be empty',
         });
       }
     } else if (typeof requester_id === 'number') {

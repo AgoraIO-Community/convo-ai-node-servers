@@ -12,12 +12,12 @@ import {
 } from '../types/client-request-types';
 
 // Router instance for handling AI agent-related endpoints
-const router = express.Router();
+export const agentRouter = express.Router();
 
 // POST /agent/invite - Start a conversation with an AI agent
 // Handles the creation of a new conversation session with an AI agent
 // Generates necessary tokens and configurations for real-time communication
-router.post(
+agentRouter.post(
   '/invite',
   async (req: Request<{}, {}, InviteAgentRequest>, res: Response) => {
     try {
@@ -154,7 +154,7 @@ router.post(
 
 // POST /agent/remove - Remove an AI agent from conversation
 // Handles the removal of an AI agent from an active conversation session
-router.post(
+agentRouter.post(
   '/remove',
   async (req: Request<{}, {}, RemoveAgentRequest>, res: Response) => {
     try {
@@ -246,5 +246,3 @@ function getTTSConfig(vendor: TTSVendor): TTSConfig {
 
   throw new Error(`Unsupported TTS vendor: ${vendor}`);
 }
-
-export default router;
