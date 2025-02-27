@@ -1,18 +1,28 @@
 # Agora ConvoAI Node Server Examples
 
-This repo contains example implementations of Node.js-based microservices that demonstrate how to interact with Agora's Conversational AI RESTful API. The examples are provided in multiple server frameworks to suit different preferences and requirements.
+This repo contains implementations of Agora's Conversational AI RESTful API using Node.js. There are two implementations provided:
 
-## Available Implementations
+- Express.js
+- Fastify
 
-### Express Server
+## What is Agora ConvoAI?
 
-The `/express` directory contains an implementation using the Express.js framework, known for its simplicity and extensive middleware ecosystem.
+Agora's Conversational AI Engine allows you to integrate real-time voice conversations with AI agents into your applications. Users can have natural, voice-based interactions with AI instead of typing text prompts.
 
-### Fastify Server
+## Key Features
 
-The `/fastify` directory contains an implementation using the Fastify framework, which focuses on providing maximum performance and low overhead.
+- Choose your own LLM provider endpoint (OpenAI, Anthropic, Llama, Custom, etc.)
+- Configure your Text-to-Speech provider (Microsoft Azure or ElevenLabs)
+- Invite/remove agents within voice channels
 
-## Getting Started
+## Build your own server
+
+To learn how to build your own server from scratch, follow the detailed step-by-step guides:
+
+- [Express.js Implementation Guide](docs/EXPRESS_GUIDE.md)
+- [Fastify Implementation Guide](docs/FASTIFY_GUIDE.md)
+
+## Run the existing servers
 
 1. Choose your preferred server implementation:
 
@@ -21,16 +31,14 @@ The `/fastify` directory contains an implementation using the Fastify framework,
 
 2. Follow the setup instructions in the README.md file within your chosen implementation's directory.
 
-Both implementations provide the same functionality and API endpoints, so you can choose the one that best fits your needs.
+## Prerequisites
 
-## Common Features
+- Node.js (v18 or higher)
+- An [Agora account](https://console.agora.io/) with Conversational AI service activated
+- API keys for TTS services (Microsoft Azure or ElevenLabs)
 
-Both implementations include:
+## Documentation
 
-- Token generation for Agora RTC
-- AI agent management (invite/remove)
-- Environment configuration for various services
-- Input/Output modality support
-- Text-to-Speech integration (Microsoft Azure and ElevenLabs)
-
-Choose your preferred implementation and refer to its specific README for detailed setup and usage instructions.
+- [Agora Conversational AI Documentation](https://docs.agora.io/en/)
+- [Express.js Documentation](https://expressjs.com/)
+- [Fastify Documentation](https://www.fastify.io/docs/latest/)
