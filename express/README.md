@@ -34,6 +34,13 @@ To learn how to build your own server, follow the instructions in the [docs/EXPR
    npm start
    ```
 
+   ## Architecture
+
+<picture>
+  <source srcset="../.github/assets/Agora-ConvoAI-NodeJS-Server-Architecture-dark.png" media="(prefers-color-scheme: dark)">
+  <img src="../.github/assets/Agora-ConvoAI-NodeJS-Server-Architecture-light.png" alt="Architecture diagram of Conversational Ai by Agora and OpenAi">
+</picture>
+
 ## API Endpoints
 
 ### GET /token

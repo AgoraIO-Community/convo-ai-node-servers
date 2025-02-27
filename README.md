@@ -1,9 +1,6 @@
 # Agora ConvoAI Node Server Examples
 
-This repo contains implementations of Agora's Conversational AI RESTful API using Node.js. There are two implementations provided:
-
-- Express.js
-- Fastify
+This repo contains implementations of Agora's Conversational AI RESTful API using Node.js and your choice of server (Express.js or Fastify).
 
 ## What is Agora ConvoAI?
 
@@ -14,6 +11,13 @@ Agora's Conversational AI Engine allows you to integrate real-time voice convers
 - Choose your own LLM provider endpoint (OpenAI, Anthropic, Llama, Custom, etc.)
 - Configure your Text-to-Speech provider (Microsoft Azure or ElevenLabs)
 - Invite/remove agents within voice channels
+
+## Architecture
+
+<picture>
+  <source srcset="./.github/assets/Agora-ConvoAI-NodeJS-Server-Architecture-dark.png" media="(prefers-color-scheme: dark)">
+  <img src="./.github/assets/Agora-ConvoAI-NodeJS-Server-Architecture-light.png" alt="Architecture diagram of Conversational Ai by Agora and OpenAi">
+</picture>
 
 ## Build your own server
 
@@ -35,6 +39,7 @@ To learn how to build your own server from scratch, follow the detailed step-by-
 
 - Node.js (v18 or higher)
 - An [Agora account](https://console.agora.io/) with Conversational AI service activated
+- API keys for LLM provider
 - API keys for TTS services (Microsoft Azure or ElevenLabs)
 
 ## Documentation
