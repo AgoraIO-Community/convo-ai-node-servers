@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 
 // Import route handlers and middleware
 import { tokenRouter } from './routes/token';
-import agentRouter from './routes/agent';
+import { agentRouter } from './routes/agent';
 import {
   validateEnvironment,
   validateContentType,
