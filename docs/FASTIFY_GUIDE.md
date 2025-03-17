@@ -1,6 +1,6 @@
 # Building an Agora Conversational AI Backend with Fastify
 
-Conversational AI is revolutionizing how people interact with artificial intelligence. Instead of carefully crafting text prompts, users can have natural, real-time voice conversations with AI agents. This opens exciting opportunities for more intuitive and efficient interactions.
+Conversational AI is revolutionizing how people interact with artificial intelligence. Instead of trying to explain it all in one single text prompt, users can have natural, real-time voice conversations with AI agents. This opens exciting opportunities for more intuitive and efficient interactions.
 
 Many developers have already invested significant time building custom LLM workflows for text-based agents. Agora's Conversational AI Engine allows you to connect these existing workflows to an Agora channel, enabling real-time voice conversations without abandoning your current AI infrastructure.
 
